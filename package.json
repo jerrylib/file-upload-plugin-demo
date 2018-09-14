@@ -1,0 +1,29 @@
+{
+  "name": "file-upload-plugin-demo",
+  "version": "1.0.0",
+  "description": "打包完成后上传最终代码至cdn",
+  "main": "file-upload-plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerrylib/file-upload-plugin-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jerrylib/file-upload-plugin-demo/issues"
+  },
+  "homepage": "https://github.com/jerrylib/file-upload-plugin-demo#readme",
+  "devDependencies": {
+    "form-data": "^2.3.2",
+    "fs-extra": "^7.0.0",
+    "minimist": "^1.2.0",
+    "node-fetch": "^2.2.0",
+    "path": "^0.12.7",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0"
+  }
+}
