@@ -1,19 +1,17 @@
 const csUtils = require('./utils/cs-upload')
-console.log('csUtils=', csUtils)
+let options = null
 
-function FileUploadPlugin(options) {
-  const { ENV } = options
-  console.log('ENV =', ENV)
+function FileUploadPlugin(op) {
+  const { ENV, dirPath } = op
+  options = op
 }
 
 FileUploadPlugin.prototype.apply = function (compiler) {
   compiler.plugin('done', function () {
-    console.log('FileUploadPlugin done');
     //todo 进行文件上传cdn操作 
-    //1.清除文件
-    csUtils.cleanCsPath()
-    //2.上传文件
-    csUtils.searchFiles()
+    //1.上传文件
+    const { dirPath } = options
+    console.log(csUtils.searchFiles(dirPath))
   });
 };
 
